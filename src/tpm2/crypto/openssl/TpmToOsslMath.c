@@ -82,13 +82,6 @@
 #ifdef MATH_LIB_OSSL
 #include "TpmToOsslMath_fp.h"
 
-#if 0		// libtpms added
-#if OPENSSL_VERSION_NUMBER < 0x10101000		/* kgold */
-#define EC_POINT_set_affine_coordinates(a,b,c,d,e)  EC_POINT_set_affine_coordinates_GFp(a,b,c,d,e)
-#define EC_POINT_get_affine_coordinates(a,b,c,d,e)  EC_POINT_get_affine_coordinates_GFp(a,b,c,d,e)
-#endif
-#endif		// libtpms added
-
 /* B.2.3.2.3.1.	OsslToTpmBn() */
 /* This function converts an OpenSSL BIGNUM to a TPM bignum. In this implementation it is assumed
    that OpenSSL uses a different control structure but the same data layout -- an array of
