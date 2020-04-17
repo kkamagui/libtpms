@@ -363,6 +363,7 @@ char *TPM2_GetInfo(enum TPMLIB_InfoFlags flags)
         "\"manufacturer\":\"id:00001014\","
         "\"version\":\"id:%08X\","
         "\"model\":\"swtpm\""
+        "\"maxRSAKeyBits\":" STRINGIFY(MAX_RSA_KEYBITS) ","
     "}";
     char *fmt = NULL, *buffer;
     bool printed = false;
